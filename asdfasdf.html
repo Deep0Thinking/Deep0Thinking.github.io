@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+
+
+		<script>
+		MathJax = {
+		  tex: {
+		    inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+		</script>
+		<script id="MathJax-script" async
+		  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		$$
+		\begin{aligned}
+		&\begin{bmatrix}
+		  \cos(\theta)& -\sin(\theta) & 0\\
+		  \sin(\theta)&  \cos(\theta)& 0\\
+		  0& 0&1
+		\end{bmatrix}
+		\quad
+		\Longrightarrow
+		\quad
+		\det{
+		\begin{bmatrix}
+		  \cos(\theta)-\lambda& -\sin(\theta) & 0\\
+		  \sin(\theta)&  \cos(\theta)-\lambda& 0\\
+		  0& 0&1-\lambda
+		\end{bmatrix}
+		}=0
+		\\\\
+		\Longrightarrow
+		\quad & \left( (\cos(\theta)-\lambda)(\cos(\theta)-\lambda)(1-\lambda)+0+0 \right)-\left(0+0+(-\sin(\theta))(\sin(\theta))(1-\lambda) \right)=0
+		\\\\
+		\Longrightarrow
+		\quad & \left(\cos^2(\theta)-2\cos(\theta)\lambda+\lambda^2+\sin^2(\theta) \right)(1-\lambda)=0
+		\\\\
+		\Longrightarrow
+		\quad & \left(\lambda^2-2\cos(\theta)\lambda+1 \right)(1-\lambda)=0
+		\\\\
+		\Longrightarrow
+		\quad & \lambda_1=1\\
+		& \lambda_2=\frac{2\cos(\theta)+\sqrt{4\cos^2(\theta)-4}}{2}=\cos(\theta)+i\sin(\theta)=e^{i\theta}\\
+		& \lambda_3=\frac{2\cos(\theta)-\sqrt{4\cos^2(\theta)-4}}{2}=\cos(\theta)-i\sin(\theta)=e^{-i\theta}
+		\end{aligned}
+		$$
+
+	</body>
+</html>
