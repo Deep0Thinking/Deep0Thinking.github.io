@@ -1,0 +1,12 @@
+# site setting
+
+title: Deep0Thinking's Blog
+
+remote_theme: jekyll/minima
+
+show_description: true
+
+header_pages:
+  - all-tags.md
+  - archive.md
+  - about.md
