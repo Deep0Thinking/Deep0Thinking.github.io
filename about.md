@@ -66,17 +66,18 @@ Email: <a href="mailto:Deep_Thinking@outlook.com" title="E-mail address">Deep_Th
 <hr>
 
 <script src="https://giscus.app/client.js"
-  data-repo="Deep0Thinking/Deep0Thinking.github.io"
-  data-repo-id="R_kgDOHLLlWQ"
-  data-category="[ENTER CATEGORY NAME HERE]"
-  data-category-id="[ENTER CATEGORY ID HERE]"
-  data-mapping="pathname"
-  data-strict="0"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-input-position="bottom"
-  data-theme="light"
-  data-lang="en"
-  crossorigin="anonymous"
-  async>
+        data-repo="Deep0Thinking/Deep0thinking.github.io"
+        data-repo-id="R_kgDOHLLlWQ"
+        data-category="General"
+        data-category-id="DIC_kwDOHLLlWc4CShS4"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
 </script>
