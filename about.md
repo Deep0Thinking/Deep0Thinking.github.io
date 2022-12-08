@@ -5,9 +5,7 @@ title: About
 
 <style>
 	.link_s {
-
 		transition: 0.3s;
-
 		text-decoration: none;
 		font-size: 7.5vmin;
 		color: black;
@@ -15,7 +13,7 @@ title: About
 		display: inline-block;
 	}
 
-	.link_s:visited{
+	.link_s:visited {
 		text-decoration: none;
 		color: black;
 	}
@@ -25,7 +23,7 @@ title: About
 		color: DodgerBlue;
 		text-decoration: underline;
 		transform: scale(1.2);
-		transition: 0.3s
+		transition: 0.3s;
 	}
 </style>
 
