@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A guide for preparing for the Putnam Maths Competition
-tags: Maths Tutorial
+tags: Maths Intro
 description: Are you planning to participate in the Putnam Maths Competition in the future? Come and check it out!
 ---
 

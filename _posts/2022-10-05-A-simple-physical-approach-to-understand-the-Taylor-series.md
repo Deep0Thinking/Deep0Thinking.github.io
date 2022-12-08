@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A simple physical approach to understand the Taylor series
-tags: Maths Physics Tutorial
+tags: Maths Physics Intro
 description: Do you know that the displacement formula with acceleration in one dimension which you had learned in Physics class actually reveals the existence of Taylor series implicitly?
 ---
 
@@ -31,28 +31,28 @@ $$
 \frac{\mathrm{d} v}{\mathrm{d} t} = a_t  \quad \Rightarrow \quad v_t=\int_{t_0}^{t}\left(a_t \right) \ \mathrm{d} t + v_0
 $$
 
-Then we substitute $v_t$ into $x_t$, we would have:
+Then we substitute  $v_t$  into  $x_t$ , we would have:
 
 $$
 x_t=\int_{t_0}^{t}\left(\int_{t_0}^{t}\left(a_t \right) \ \mathrm{d} t \right)\ \mathrm{d} t + v_0(t-t_0)    + x_0 \tag{1}
 $$
 
 Note that since $a_t$ is a constant (In fact, this is related to the **Principle of least action** in Physics: We assume that the accleration of any system must be a constant,
-in other words: $\dfrac{\mathrm{d}^3 (x)}{(\mathrm{d} t)^3} = 0$), therefore we could get our displacement formula with acceleration:
+in other words:  $\dfrac{\mathrm{d}^3 (x)}{(\mathrm{d} t)^3} = 0$ ), therefore we could get our displacement formula with acceleration:
 
 $$
 x_t=\dfrac{a_t(t-t_0)^2}{2}+v_0(t-t_0)+x_0
 $$
 
-But the problem is: What if $a_t$ is not a constant anymore (And that situations do happen a lot in real life), for example, have you heard about presence of *jerk* ($j_t =\dfrac{\mathrm{d} a}{\mathrm{d} t}$) before?
+But the problem is: What if $a_t$ is not a constant anymore (And that situations do happen a lot in real life), for example, have you heard about presence of *jerk* ( $j_t =\dfrac{\mathrm{d} a}{\mathrm{d} t}$ ) before?
 
-Then we need to deal with the equation $(1)$ again, through using the same deriving method stated above, we could get:
+Then we need to deal with the equation  $(1)$  again, through using the same deriving method stated above, we could get:
 
 $$
 \frac{\mathrm{d} a}{\mathrm{d} t} = j_t  \quad \Rightarrow \quad a_t=\int_{t_0}^{t}\left(j_t \right) \ \mathrm{d} t + a_0
 $$
 
-Next we substitute $a_t$ into $x_t$, we can have:
+Next we substitute  $a_t$  into  $x_t$ , we can have:
 
 $$
 x_t=\int_{t_0}^{t}\left(\int_{t_0}^{t}\left(\int_{t_0}^{t}\left( j_t\right) \ \mathrm{d} t  \right) \ \mathrm{d} t  \right)  \ \mathrm{d} t + \dfrac{a_0(t-t_0)^2}{2}+ v_0(t-t_0)+ x_0
@@ -70,7 +70,7 @@ $$
 
 Now I believe that you could clearly see the presence of the **Taylor series** in this equation right?
 
-Therefore if we keep iterating using the same method and let $x_{t}=f(t)$, we would be able to get the real **Taylor series** formula:
+Therefore if we keep iterating using the same method and let  $x_{t}=f(t)$ , we would be able to get the real **Taylor series** formula:
 
 $$
 f(t)=\sum_{n=0}^{\infty }\left( \frac{f^{(n)}{'}({t=t_0})}{n!} \left(t-t_0\right)^{n}\right)
