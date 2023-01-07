@@ -7,7 +7,7 @@ description: Actually they can do that, but why they don't? Because from the per
 
 When I first meet that condition (A linear subspace must have the additive identity) in the book of "Linear algebra done right", I felt it could be derived from "A linear subspace must be nonempty" + "A linear subspaces is closed under linear operations", which indicated that "A linear subspace must be nonempty" is a more fundamental condition than "A linear subspace must have the additive identity". So at that time, I believed that the replacement would definitely be correct, but I didn't really think through why mathematicians choose that not-most-fundamental one as a condition until I was introduced to modern algebra...
 
-From the perspective of modern abstract, "A linear subspace must have the additive identity" is a more fundamental condition: Let me pull out a thing with the similar algebraic structure as an example -- submonoid, its conditions also include "A submonoid must have the binary-operation identity of the monoid it is contained in", but here we cannot replace this with "A submonoid must be nonempty":
+From the perspective of modern algebra, "A linear subspace must have the additive identity" is a more fundamental condition: Let me pull out a thing with the similar algebraic structure as an example -- submonoid, its conditions also include "A submonoid must have the binary-operation identity of the monoid it is contained in", but here we cannot replace this with "A submonoid must be nonempty":
 
 Because let we construct a submonoid $(X,\*)$, where
 
