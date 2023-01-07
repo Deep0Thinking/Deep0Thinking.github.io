@@ -65,7 +65,7 @@ x_t=\int_{t_0}^{t}\left(\int_{t_0}^{t}\left(\int_{t_0}^{t}\left( j_t\right) \ \m
 $$
 
 $$
-\text{Where } \dot{x}_{t} = \dfrac{\mathrm{d} x}{\mathrm{d} t}, \dot{x}_{t} =\dfrac{\mathrm{d}^2 x}{(\mathrm{d} t)^2} \text{ and so on.}
+\text{Where } \dot{x}_{t} = \dfrac{\mathrm{d} x}{\mathrm{d} t}, \ddot{x}_{t} =\dfrac{\mathrm{d}^2 x}{(\mathrm{d} t)^2} \text{ and so on.}
 $$
 
 Now I believe that you could clearly see the presence of the **Taylor series** in this equation right?
