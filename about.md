@@ -13,12 +13,6 @@ title: About
 		display: inline-block;
 	}
 
-	.link_s:visited {
-		text-decoration: none;
-		color: black;
-	}
-
-
 	.link_s:hover {
 		color: DodgerBlue;
 		text-decoration: underline;
