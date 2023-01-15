@@ -17,7 +17,7 @@ title: About
 			display: inline-block;
 		}
 
-		.Text:visited
+		.link_s:visited
 		{
 			text-decoration: none;
 			color: black;
