@@ -3,25 +3,33 @@ layout: page
 title: About
 ---
 
-<style>
-	.link_s {
-		transition: 0.3s;
-		text-decoration: none;
-		font-size: 7.5vmin;
-		color: black;
-		margin-right: 2vmin;
-		display: inline-block;
-	}
+<head>
 
-	.link_s:hover {
-		color: DodgerBlue;
-		text-decoration: underline;
-		transform: scale(1.2);
-		transition: 0.3s;
-	}
-</style>
+	<style>
+		.link_s
+		{
+			transition: 0.3s;
+			text-decoration: none;
+			font-size: 7.5vmin;
+			color: black;
+			margin-right: 2vmin;
+			display: inline-block;
+		}
 
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+		.link_s:hover
+		{
+			color: DodgerBlue;
+			text-decoration: underline;
+			transform: scale(1.2);
+			transition: 0.3s;
+		}
+	</style>
+
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+
+
 
 <div style="display: flex; align-items: center;">
 	<div style="flex-grow: 1; text-align: center; margin-right: 2.5vmin;">
