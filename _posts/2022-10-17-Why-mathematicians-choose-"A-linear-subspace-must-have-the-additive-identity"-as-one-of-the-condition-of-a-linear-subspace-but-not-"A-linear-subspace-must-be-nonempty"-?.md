@@ -11,7 +11,11 @@ From the perspective of modern algebra, "A linear subspace must have the additiv
 
 Because let we construct a submonoid $(X,\*)$, where
 
-$$X = \left \{  \begin{bmatrix} x  & 0\\\ 0 & 0 \end{bmatrix} \mid x \in \mathbb{R} \right \}  \subset  R^{2 \times 2} = \left\{  \begin{bmatrix} a  & b\\\ c & d \end{bmatrix} \mid a,b,c,d \in \mathbb{R}  \right \}$$
+<div style="overflow: auto;">
+$$
+X = \left \{  \begin{bmatrix} x  & 0\\\ 0 & 0 \end{bmatrix} \mid x \in \mathbb{R} \right \}  \subset  R^{2 \times 2} = \left\{  \begin{bmatrix} a  & b\\\ c & d \end{bmatrix} \mid a,b,c,d \in \mathbb{R}  \right \}
+$$
+</div>
 
 And $\*$ is the matrix multiplication.
 
