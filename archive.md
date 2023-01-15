@@ -35,8 +35,6 @@ title: Archive
 			height: 100%;
 			text-align: center;
 			cursor: pointer;
-
-			text-align: center;
 			display: flex;
 	    align-items: center;
 		}
@@ -84,6 +82,7 @@ title: Archive
 			left: 50%;
 			transform: translate(-50%, -50%);
 			width: 75%;
+			justify-content: center;
 		}
 
 		.Single-Container:hover .Text

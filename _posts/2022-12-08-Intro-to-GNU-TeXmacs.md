@@ -9,7 +9,9 @@ description: Are you a LaTex user? NVM, come and check it out :)
 
 <br>
 
-<iframe width="100%" height="500vmax" src="https://www.youtube.com/embed/H46ON2FB30U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="position: relative; width: 100%; padding-bottom: 62.5%;">
+  <iframe style="position: absolute; width: 100%; height: 100%;" src="https://www.youtube.com/embed/H46ON2FB30U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <br>
 
