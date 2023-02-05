@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+</script>
+
+<script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+  	
+
+
+
+
+
+	
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico">
+
+</head><style>
+
+    .site-header
+    {
+      position: sticky;
+      top: 0px;
+      background-color: rgba(255,255,255,1);
+      z-index: 1;
+    }
+
+  </style>
+
+  <body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Deep0Thinking&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/all-tags.html">Tags</a><a class="page-link" href="/archive.html">Archive</a><a class="page-link" href="/about.html">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper" style="text-align: justify;">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">A simple physical approach to understand the Taylor series</h1>
+
+    <span>[
+    
+      
+      <a href="/tag/Maths"><code class="highligher-rouge"><nobr>Maths</nobr></code></a>
+    
+      
+      <a href="/tag/Physics"><code class="highligher-rouge"><nobr>Physics</nobr></code></a>
+    
+      
+      <a href="/tag/Intro"><code class="highligher-rouge"><nobr>Intro</nobr></code></a>
+    
+    ]</span>
+
+    <br>
+    <br>
+
+    <p>
+      Do you know that the displacement formula with acceleration in one dimension which you had learned in Physics class actually reveals the existence of Taylor series implicitly?
+    </p>
+
+    <p class="post-meta" style="font-size: 18px"><time class="dt-published" datetime="2022-10-05T00:00:00-04:00" itemprop="datePublished">
+        Oct 5, 2022
+      </time></p>
+  </header>
+
+  <hr>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I still remember the first time that I meet the concept of <strong>Taylor series</strong> was in one AP calculus textbook. It’s kind of a pity that the AP calculus textbook I was reading at that time didn’t give any further explanation about why and how this formula came up, etc. So I just questioned myself about its formation and finally I did figured it out at that time by using the knowledge I’ve learned in Physics. I guess you may wonder why wouldn’t I just search on the Internet and see the proof of <strong>Taylor series</strong>, in fact, I did do that, but didn’t work for me at that point, since I lack too much Maths knowledge to understand that proof. Therefore I found a new way to help myself understand the <strong>Taylor series</strong> at that time.</p>
+
+<p>Firstly, let us derive the displacement formula with acceleration in one dimension:</p>
+
+<div style="overflow: auto;">
+$$
+\begin{aligned}
+\frac{\mathrm{d} x}{\mathrm{d} t} &amp;=v_t \\
+\\
+\mathrm{d} x&amp;=v_t \times \mathrm{d} t \\
+\int_{t_0}^{t} \mathrm{d} x&amp;= \int_{t_0}^{t}\left(v_t \right) \ \mathrm{d} t \\
+x_t&amp;=\int_{t_0}^{t}\left(v_t \right) \ \mathrm{d} t + x_0
+\end{aligned}
+$$
+</div>
+
+<p>Similarly, we can use the same deriving method of:</p>
+
+<div style="overflow: auto;">
+$$
+\frac{\mathrm{d} x}{\mathrm{d} t} = v_t \quad \Rightarrow \quad x_t=\int_{t_0}^{t}\left(v_t \right) \ \mathrm{d} t + x_0
+$$
+</div>
+
+<p>To get:</p>
+
+<div style="overflow: auto;">
+$$
+\frac{\mathrm{d} v}{\mathrm{d} t} = a_t  \quad \Rightarrow \quad v_t=\int_{t_0}^{t}\left(a_t \right) \ \mathrm{d} t + v_0
+$$
+</div>
+
+<p>Then we substitute  $v_t$  into  $x_t$ , we would have:</p>
+
+<div style="overflow: auto;">
+$$
+x_t=\int_{t_0}^{t}\left(\int_{t_0}^{t}\left(a_t \right) \ \mathrm{d} t \right)\ \mathrm{d} t + v_0(t-t_0)    + x_0 \tag{1}
+$$
+</div>
+
+<p>Note that since $a_t$ is a constant (In fact, this is related to the <strong>Principle of least action</strong> in Physics: We assume that the accleration of any system must be a constant,
+in other words: $\dfrac{\mathrm{d}^3 (x)}{(\mathrm{d} t)^3} = 0$ ), therefore we could get our displacement formula with acceleration:</p>
+
+<div style="overflow: auto;">
+$$
+x_t=\dfrac{a_t(t-t_0)^2}{2}+v_0(t-t_0)+x_0
+$$
+</div>
+
+<p>But the problem is: What if $a_t$ is not a constant anymore (And that situations do happen a lot in real life), for example, have you heard about presence of <em>jerk</em> ( $j_t =\dfrac{\mathrm{d} a}{\mathrm{d} t}$ ) before?</p>
+
+<p>Then we need to deal with the equation  $(1)$  again, through using the same deriving method stated above, we could get:</p>
+
+<div style="overflow: auto;">
+$$
+\frac{\mathrm{d} a}{\mathrm{d} t} = j_t  \quad \Rightarrow \quad a_t=\int_{t_0}^{t}\left(j_t \right) \ \mathrm{d} t + a_0
+$$
+</div>
+
+<p>Next we substitute  $a_t$  into  $x_t$ , we can have:</p>
+
+<div style="overflow: auto;">
+$$
+x_t=\int_{t_0}^{t}\left(\int_{t_0}^{t}\left(\int_{t_0}^{t}\left( j_t\right) \ \mathrm{d} t  \right) \ \mathrm{d} t  \right)  \ \mathrm{d} t + \dfrac{a_0(t-t_0)^2}{2}+ v_0(t-t_0)+ x_0
+$$
+</div>
+
+<p>And using some derivatives form to substitute in that equation:</p>
+
+<div style="overflow: auto;">
+$$
+x_t=\int_{t_0}^{t}\left(\int_{t_0}^{t}\left(\int_{t_0}^{t}\left( j_t\right) \ \mathrm{d} t  \right) \ \mathrm{d} t  \right)  \ \mathrm{d} t + \dfrac{\ddot{x}_{t=t_0}(t-t_0)^2}{2!}+\dfrac{\dot{x}_{t=t_0}(t-t_0)}{1!}+ \dfrac{x_{t=t_0}}{0!}
+$$
+</div>
+
+<div style="overflow: auto;">
+$$
+\text{Where } \dot{x}_{t} = \dfrac{\mathrm{d} x}{\mathrm{d} t}, \ddot{x}_{t} =\dfrac{\mathrm{d}^2 x}{(\mathrm{d} t)^2} \text{ and so on.}
+$$
+</div>
+
+<p>Now I believe that you could clearly see the presence of the <strong>Taylor series</strong> in this equation right?</p>
+
+<p>Therefore if we keep iterating using the same method and let  $x_{t}=f(t)$ , we would be able to get the real <strong>Taylor series</strong> formula:</p>
+
+<div style="overflow: auto;">
+$$
+f(t)=\sum_{n=0}^{\infty }\left( \frac{f^{(n)}{'}({t=t_0})}{n!} \left(t-t_0\right)^{n}\right)
+$$
+</div>
+
+<p>This also indicate us the essence of <strong>Taylor series</strong>: Knowing all of its $n$th ($n$ is natural numbers) derivatives value at one point is equivalent to Knowing the primitive formula of a function.</p>
+
+  </div><a class="u-url" href="/2022/10/05/A-simple-physical-approach-to-understand-the-Taylor-series.html" hidden></a>
+
+</article>
+
+<hr>
+
+<script src="https://giscus.app/client.js"
+        data-repo="Deep0Thinking/Deep0thinking.github.io"
+        data-repo-id="R_kgDOHLLlWQ"
+        data-category="General"
+        data-category-id="DIC_kwDOHLLlWc4CShS4"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+      </div>
+    </main>
+
+  </body>
+
+</html>
