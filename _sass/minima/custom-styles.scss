@@ -216,3 +216,21 @@
   color: black;
 }
 
+.section-nav
+{
+  display: none;
+
+  @media screen and (min-width: 1366px)
+  {
+    display: block;
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 10px 30px;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    position: fixed;
+    left: calc( (100vw - 1325px) /2) ; 
+    top: 10%;
+  }
+  
+}

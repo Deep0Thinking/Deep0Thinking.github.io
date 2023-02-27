@@ -12,3 +12,6 @@ header_pages:
   - about.md
 
 google_analytics: G-880676458P
+
+plugins:
+  - jekyll-toc
