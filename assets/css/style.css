@@ -193,9 +193,6 @@
   color: #099;
 }
 
-/**
- * custom-variables
- */
 html {
   font-size: 16px;
 }
@@ -236,12 +233,12 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 .highlight {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 hr {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /**
@@ -274,7 +271,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 li > ul,
@@ -316,7 +313,7 @@ a:hover {
 blockquote {
   color: #828282;
   border-left: 4px solid #e8e8e8;
-  padding-left: 15px;
+  padding-left: 10px;
   font-size: 1.125rem;
   font-style: italic;
 }
@@ -365,17 +362,17 @@ pre > code {
  * Wrapper
  */
 .wrapper {
-  max-width: calc(800px - (30px));
+  max-width: calc(900px - (20px));
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .wrapper {
-    max-width: calc(800px - (30px * 2));
-    padding-right: 30px;
-    padding-left: 30px;
+    max-width: calc(900px - (20px * 2));
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -411,7 +408,7 @@ pre > code {
  * Tables
  */
 table {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   width: 100%;
   text-align: left;
   color: #3f3f3f;
@@ -422,7 +419,7 @@ table tr:nth-child(even) {
   background-color: #f7f7f7;
 }
 table th, table td {
-  padding: 10px 15px;
+  padding: 6.6666666667px 10px;
 }
 table th {
   background-color: #f0f0f0;
@@ -431,7 +428,7 @@ table th {
 table td {
   border: 1px solid #e8e8e8;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   table {
     display: block;
     overflow-x: auto;
@@ -446,7 +443,7 @@ table td {
 .site-header {
   border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
-  min-height: 55.95px;
+  min-height: 37.3px;
   line-height: 54px;
   position: relative;
 }
@@ -470,7 +467,7 @@ table td {
 .site-nav {
   position: absolute;
   top: 9px;
-  right: 15px;
+  right: 10px;
   background-color: #fdfdfd;
   border: 1px solid #e8e8e8;
   border-radius: 5px;
@@ -547,12 +544,12 @@ table td {
  */
 .site-footer {
   border-top: 1px solid #e8e8e8;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .footer-heading {
   font-size: 1.125rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .feed-subscribe .svg-icon {
@@ -573,27 +570,27 @@ table td {
 }
 
 .footer-col {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .footer-col-1,
 .footer-col-2 {
-  width: calc(50% - (30px / 2));
+  width: calc(50% - (20px / 2));
 }
 
 .footer-col-3 {
-  width: calc(100% - (30px / 2));
+  width: calc(100% - (20px / 2));
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .footer-col-1 {
-    width: calc(35% - (30px / 2));
+    width: calc(35% - (20px / 2));
   }
   .footer-col-2 {
-    width: calc(20% - (30px / 2));
+    width: calc(20% - (20px / 2));
   }
   .footer-col-3 {
-    width: calc(45% - (30px / 2));
+    width: calc(45% - (20px / 2));
   }
 }
 @media screen and (min-width: 600px) {
@@ -601,23 +598,23 @@ table td {
     display: flex;
   }
   .footer-col {
-    width: calc(100% - (30px / 2));
-    padding: 0 15px;
+    width: calc(100% - (20px / 2));
+    padding: 0 10px;
   }
   .footer-col:first-child {
-    padding-right: 15px;
+    padding-right: 10px;
     padding-left: 0;
   }
   .footer-col:last-child {
     padding-right: 0;
-    padding-left: 15px;
+    padding-left: 10px;
   }
 }
 /**
  * Page content
  */
 .page-content {
-  padding: 30px 0;
+  padding: 20px 0;
   flex: 1 0 auto;
 }
 
@@ -634,7 +631,7 @@ table td {
   list-style: none;
 }
 .post-list > li {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .post-meta {
@@ -651,7 +648,7 @@ table td {
  * Posts
  */
 .post-header {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .post-title,
@@ -660,7 +657,7 @@ table td {
   letter-spacing: -1px;
   line-height: 1.15;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .post-title,
   .post-content h1 {
     font-size: 2.625rem;
@@ -668,15 +665,15 @@ table td {
 }
 
 .post-content {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .post-content h2 {
   font-size: 1.75rem;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .post-content h2 {
     font-size: 2rem;
   }
@@ -684,7 +681,7 @@ table td {
 .post-content h3 {
   font-size: 1.375rem;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .post-content h3 {
     font-size: 1.625rem;
   }
@@ -723,7 +720,7 @@ table td {
  * Pagination navbar
  */
 .pagination {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .pagination li a, .pagination li div {
   min-width: 41px;
@@ -732,7 +729,7 @@ table td {
 }
 .pagination li div {
   display: block;
-  padding: 7.5px;
+  padding: 5px;
   border: 1px solid transparent;
 }
 .pagination li div.pager-edge {
@@ -743,9 +740,9 @@ table td {
 /**
  * Grid helpers
  */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .one-half {
-    width: calc(50% - (30px / 2));
+    width: calc(50% - (20px / 2));
   }
 }
 /**
@@ -924,6 +921,23 @@ table td {
   transform: scale(1.1);
   transition: 0.3s;
   color: black;
+}
+
+.section-nav {
+  display: none;
+}
+@media screen and (min-width: 1366px) {
+  .section-nav {
+    display: block;
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 10px 30px;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    position: fixed;
+    left: calc((100vw - 1325px) / 2);
+    top: 10%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
