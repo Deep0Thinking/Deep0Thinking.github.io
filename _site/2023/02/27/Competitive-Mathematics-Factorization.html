@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+</script>
+
+<script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+  	
+
+
+
+
+
+	
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico">
+
+</head><style>
+
+    .site-header
+    {
+      position: sticky;
+      top: 0px;
+      background-color: rgba(255,255,255,1);
+      z-index: 1;
+    }
+
+  </style>
+
+  <body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Deep0Thinking&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/all-tags.html">Tags</a><a class="page-link" href="/archive.html">Archive</a><a class="page-link" href="/about.html">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper" style="text-align: justify;">
+        <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#basics">Basics</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#definition">Definition</a></li>
+<li class="toc-entry toc-h3"><a href="#fundamentals">Fundamentals</a></li>
+<li class="toc-entry toc-h3"><a href="#formulas">Formulas</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#strategies">Strategies</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#muc">MUC</a></li>
+<li class="toc-entry toc-h3"><a href="#ms">MS</a></li>
+<li class="toc-entry toc-h3"><a href="#prt">PRT</a></li>
+<li class="toc-entry toc-h3"><a href="#sys-polynomials">SYS Polynomials</a></li>
+<li class="toc-entry toc-h3"><a href="#mot">MOT</a></li>
+<li class="toc-entry toc-h3"><a href="#mte">MTE</a></li>
+<li class="toc-entry toc-h3"><a href="#practice">Practice</a></li>
+<li class="toc-entry toc-h3"><a href="#answers-hover-to-display">Answers (hover to display)</a></li>
+</ul>
+</li>
+</ul>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Competitive Mathematics --- Factorization</h1>
+
+    <span>[
+    
+      
+      <a href="/tag/Maths"><code class="highligher-rouge"><nobr>Maths</nobr></code></a>
+    
+      
+      <a href="/tag/Competitive"><code class="highligher-rouge"><nobr>Competitive</nobr></code></a>
+    
+    ]</span>
+
+    <br>
+    <br>
+
+    <p>
+      Preparation for Competitive Maths Competitions...
+    </p>
+
+    <p class="post-meta" style="font-size: 18px"><time class="dt-published" datetime="2023-02-27T00:00:00+08:00" itemprop="datePublished">
+        Feb 27, 2023
+      </time></p>
+  </header>
+
+  <hr>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <blockquote>
+  <p>This article draws heavily on the content from 《数学奥林匹克小丛书》 and incorporates some personal insights and reorganization. Therefore, it can be regarded as a set of notes rather than an entirely original work.</p>
+</blockquote>
+
+<h2 id="basics">Basics</h2>
+
+<h3 id="definition">Definition</h3>
+
+<p><strong>The definition of “factorize” is: To write a mathematical object as the product of several factors, and every factor in this expression cannot be further factorized over the specified field.</strong></p>
+
+<p>And we can do the factorization over the rational numbers field, real numbers field, complex numbers field…etc, all in all, <strong>it depends on the goals you that want to approach</strong>. But in this article, we would mainly discuss the factorization over the integer field, because it’s relatively easy for humans to solve…</p>
+
+<p>Here is some examples of factorizations:</p>
+
+<div style="overflow: auto;">
+$$
+\begin{aligned}
+&amp;24 =2^3 \times 3 \\ 
+&amp;a^2-5b^2 =(a+\sqrt{5}b)(a-\sqrt{5}b) \\ 
+&amp;64a^4+1 =(8a^2-4a+1)(8a^2+4a+1) \\ 
+&amp;a^3+b^3+c^3-3abc  = (a+b+c)(a^2+b^2+c^2-ab-bc-ca)\\
+\end{aligned}
+$$
+</div>
+
+<p>So how can you do the factorizations like above? Don’t worry, that’s what you are going to learn later in this article.</p>
+
+<h3 id="fundamentals">Fundamentals</h3>
+
+<p>Before we moving on to the following parts, I think it’s necessary to introduce the basic concepts and the fundamentals of factorizations first…</p>
+
+<p>Please consider this factorization over the real numbers field:</p>
+<div style="overflow: auto;">
+$$x^3+2x^2+3x+6$$
+</div>
+
+<p>Student A:</p>
+
+<div style="overflow: auto;">
+$$
+\begin{aligned}
+&amp;x^3+2x^2+3x+6 \\
+=\ &amp; (x^3+3x)+ (2x^2+6) \\
+=\ &amp; x(x^2+3)+ 2(x^2+3) \\
+=\ &amp; (x+2)(x^2+3) \\
+\end{aligned}
+$$
+</div>
+
+<p>Student B:</p>
+
+<div style="overflow: auto;">
+$$
+\begin{aligned}
+&amp;x^3+2x^2+3x+6 \\
+=\ &amp; (x^3+2x^2)+ (3x+6) \\
+=\ &amp; x^2(x+2)+ 3(x+2) \\
+=\ &amp; (x+2)(x^2+3) \\
+\end{aligned}
+$$
+</div>
+
+<p>We can see that student A and B both get the same result, though they are using different approaching methods to factorize.</p>
+
+<p>But here is the question, how can we be sure that even if we use different approaching methods to factorize, we are still going to get the same factorization result?</p>
+
+<p>In other words, is the factorization unique over the real numbers field?</p>
+
+<p>The answer is yes, the factorization over the real numbers field is unique.</p>
+
+<p>And here is a brief informal reasoning which we won’t discuss the details further, because these mathematical concepts are way more beyond the contents that we are focusing on currently.</p>
+
+<p>Based on the fundamental theorem of algebra, its direct inference and the complex conjugate root theorem, we are able to conclude that:</p>
+
+<p><strong>(Assume $P(x)$ and $p(x)$ to be any polynomial of 1 variable $x$ with real coefficients)</strong></p>
+
+<p><strong>1. $\forall \  P(x)$ can always be factorized to the product form of several $p(x)$ of 1st degree and 2nd degree.</strong></p>
+
+<p><strong>2. The factorization of $\forall \  P(x)$ over the real numbers field is unique.</strong></p>
+
+<p>$\newline$</p>
+
+<p>It is essential to understand the two fundamental properties of factorization as we will encounter various factorization problems. Thus, I would like to claim these two conclusions at this point. Please keep them in mind to aid your comprehension of factorization.</p>
+
+<h3 id="formulas">Formulas</h3>
+<div style="overflow: auto;">
+$$
+\begin{aligned}
+&amp; a^2-b^2=(a+b)(a-b) \\
+&amp; a^3+b^3=(a+b)\left(a^2-a b+b^2\right) \\
+&amp; a^3-b^3=(a-b)\left(a^2+a b+b^2\right) \\
+&amp; a^2+2 a b+b^2=(a+b)^2 \\
+&amp; a^2-2 a b+b^2=(a-b)^2 \\
+&amp; a^3+3 a^2 b+3 a b^2+b^3=(a+b)^3 \\
+&amp; a^3-3 a^2 b+3 a b^2-b^3=(a-b)^3 \\
+&amp;a^2+b^2+c^2+2 ab+2 bc+2 ca  =(a+b+c)^2\\
+&amp;a^n-b^n=(a-b)\left(a^{n-1}+a^{n-2} b+a^{n-3} b^2+\cdots+a b^{n-2}+b^{n-1}\right), \quad n \in \mathbb{Z^+}\\
+&amp;a^n+b^n=(a+b)\left(a^{n-1}-a^{n-2} b+a^{n-3} b^2-\cdots-a b^{n-2}+b^{n-1}\right), \quad n \in (2\mathbb{Z^+}-1)\\
+\end{aligned}
+$$
+</div>
+
+<p>The listed factorization formulas above are so important that you should master. And all these formulas are easy to prove except the last 2, which requires you to apply the <strong>polynomial remainder theorem</strong> (which we will discuss later).</p>
+
+<h2 id="strategies">Strategies</h2>
+
+<h3 id="muc">MUC</h3>
+
+<p><strong>Method of undetermined coefficients</strong></p>
+
+<p>It is an approach that does the factorization reversely through assuming the factors expressions and then expand forwardly.</p>
+
+<p><br /></p>
+
+<p><em>Problem</em>: Please factorize</p>
+
+<div style="overflow: auto;">
+$$Ax^2+Bx+C, \quad A,B,C \in \mathbb{Q} $$
+</div>
+
+<p>over the integer numbers field.</p>
+
+<p><br /></p>
+
+<p>First, let’s be clear that when we are talking about the factorization of a polynomial, it means we are trying to find its polynomial factors. So a polynomial won’t have some factors like $(ax^{0.5}+b)$ or $(ax^{-1}+b)$ according to the definition of the polynomial.</p>
+
+<p>If $Ax^2+Bx+C$ can be factored over the integers, it must have 2 factors polynomial of 1st degree in the form of $ax+b$, since it is a 2nd degree polynomial. If it cannot be factored in this way, then it can only have factors of 2nd or higher degree, which would imply that the polynomial cannot be factored over the integer numbers field or even over the real numbers field.</p>
+
+<p>Now, assume $\exists \ a,b,c,d \in \mathbb{Q}, \quad c,d \ne 0$ such that:</p>
+<div style="overflow: auto;">
+$$
+    \begin{aligned}
+    (ax+b)(cx+d)&amp;= Ax^2+Bx+C \\
+    acx^2+ (ad+bc)x+bd &amp;= Ax^2+Bx+C \\
+    \end{aligned}
+$$
+</div>
+
+<p>Then we have:</p>
+
+<div style="overflow: auto;">
+$$
+    \begin{cases}
+    &amp;ac &amp;= A \\
+    &amp;ad+bc&amp;=B \\
+    &amp;bd&amp;=C \\
+    \end{cases}
+    \label{eq:function}
+    \implies 
+    \begin{cases}
+    &amp;a &amp;= \frac{A}{c} &amp; (1)\\
+    &amp;ad+bc&amp;=B &amp; (2)\\
+    &amp;b&amp;=\frac{C}{d} &amp; (3)\\
+    \end{cases}
+$$
+</div>
+
+<p>Substitute $(1), (3)$ into $(2)$ get:</p>
+
+<div style="overflow: auto;">
+$$
+\begin{aligned}
+\frac{A}{c}d+\frac{C}{d}c&amp;=B \\
+Ad^2-Bcd+Cc^2&amp;=0 \\
+\end{aligned}
+$$
+</div>
+
+<p>Now the question has changed to factorize $Ad^2-Bcd+Cc^2$ over the integer numbers field, but it is even more complicated than the original problem $Ax^2+Bx+C$ …</p>
+
+<p>So that indicates, maybe we should change the way we think.</p>
+
+<p><br /></p>
+
+<p>Let’s solve the following problem first.</p>
+
+<p><br /></p>
+
+<p><em>Problem</em>: Please factorize</p>
+
+<div style="overflow: auto;">
+$$x^2+x-6$$
+</div>
+
+<p>over the integer numbers field.</p>
+
+<p><br /></p>
+
+<p>Assume $\exists \ a,b,c,d \in \mathbb{Q}$ such that:</p>
+<div style="overflow: auto;">
+$$
+    \begin{aligned}
+    (ax+b)(cx+d)&amp;= x^2+x-6 \\
+    acx^2+ (ad+bc)x+bd &amp;= x^2+x-6 \\
+    \end{aligned}
+$$
+</div>
+
+<p>Then we have:</p>
+
+<div style="overflow: auto;">
+$$
+    \begin{cases}
+    &amp;ac &amp;= 1 \\
+    &amp;ad+bc&amp;=1 \\
+    &amp;bd&amp;=-6 \\
+    \end{cases}
+$$
+</div>
+
+<p>Since attempting to solve the entire system of equations would be difficult, it may be more effective to use a different approach. One possible method is to find integer solutions by substituting numbers into the equations system first… and we luckily got:</p>
+
+<div style="overflow: auto;">
+$$
+    \begin{cases}
+    a &amp;= 1 \\
+    b&amp;=3 \\
+    c &amp;= 1 \\
+    d&amp;=-2 \\
+    \end{cases}
+$$
+</div>
+
+<p>Therefore $x^2+x-6=(ax+b)(cx+d)=(x+3)(x-2)$</p>
+
+<p><br /></p>
+
+<p>Now, let’s think about how to make this problem harder by doing some tiny modifications:</p>
+
+<div style="overflow: auto;">
+$$x^2+x-6 \ \to\  \dfrac{x^2+x-6}{3} = \dfrac{x^2}{3}+\frac{x}{3}-2$$
+</div>
+
+<p>Here it is! Then let’s try to solve them.</p>
+
+<p><br /></p>
+
+<p><em>Problem</em>: Please factorize</p>
+
+<div style="overflow: auto;">
+$$\dfrac{x^2}{3}+\dfrac{x}{3}-2$$ 
+</div>
+
+<p>over the integer numbers field.</p>
+
+<p><br /></p>
+
+<p>Are you going to apply the previous solving method? Yes, you can, but this time, you’ll definitely need to deal with fractions (because integer $\times$ integer $\ne$ fraction…etc). Since the polynomial in the problem contains fractions, it may be more convenient to eliminate them at first. Therefore, transform:</p>
+
+<div style="overflow: auto;">
+$$\dfrac{x^2}{3}+\frac{x}{3}-2 = \dfrac{1}{3}(x^2+x-6)$$ 
+</div>
+
+<p>Then we can focus on solving $x^2+x-6$ first, then times the result with $\dfrac{1}{3}$ . So $\dfrac{x^2}{3}+\dfrac{x}{3}-2=\dfrac{1}{3}(x+3)(x-2)$, accordingly the answer is $\dfrac{x^2}{3}+\dfrac{x}{3}-2$ cannot be factorized over the integer numbers field because its factors contain non-integer coefficients.</p>
+
+<p><br /></p>
+
+<p>Similarly…</p>
+
+<p><br /></p>
+
+<div style="overflow: auto;">
+$$x^2+x-6 \ \to\ 7(x^2+x-6) = 7x^2+7x-42 $$
+</div>
+
+<p><br /></p>
+
+<p><em>Problem</em>: Please factorize</p>
+
+<div style="overflow: auto;">
+$$7x^2+7x-42$$ 
+</div>
+
+<p>over the integer numbers field.</p>
+
+<p><br /></p>
+
+<p>Using the same approach, we can get the answer: $7x^2+7x-42= 7(x+3)(x-2)$</p>
+
+<p><br /></p>
+
+<p>How about this…</p>
+
+<p><br /></p>
+
+<div style="overflow: auto;">
+$$x^2+x-6= (x+3)(x-2) \ \to\ (x+3y)(x-2y)=x^2+xy-6y^2 $$
+</div>
+
+<p><br /></p>
+
+<p><em>Problem</em>: Please factorize</p>
+
+<div style="overflow: auto;">
+$$x^2+xy-6y^2$$
+</div>
+
+<p>over the integer numbers field.</p>
+
+<p><br /></p>
+
+<p>We can still apply the MUC for this problem, but please make sure that you set up $(ax+by)(cx+dy)$ instead of some others factors like $(ax+b)(cx+dy^2)$, because that product cannot produce the term of $xy$. Furthermore, it is important to note that any factors polynomials of a polynomial cannot have a degree higher than the degree of the polynomial itself  (you can try to prove it using the MUC, it is quite easy).</p>
+
+<p>So the result is: $x^2+xy-6y^2= (x+3y)(x-2y)$</p>
+
+<p><br /></p>
+
+<p>Keep modifying the problem…</p>
+
+<p><br /></p>
+
+<div style="overflow: auto;">
+$$x^2+x-6 = (x+3)(x-2) \ \to\ (x+2y+3)(x-5y-2) = x^2 - 3xy - 10y^2 + x - 19y - 6 $$
+</div>
+
+<p><br /></p>
+
+<p><em>Problem</em>: Please factorize</p>
+
+<div style="overflow: auto;">
+$$x^2 - 3xy - 10y^2 + x - 19y - 6$$ 
+</div>
+
+<p>over the integer numbers field.</p>
+
+<p><br /></p>
+
+<p>For this problem, maybe you will not know how to set up the factors with undetermined coefficients unless you saw the process how I derive it. Then what should you do to develop your “MUC” ability effectively? One word, practicing.</p>
+
+<p>For $x^2 - 3xy - 10y^2 + x - 19y - 6$, we can notice that the there are terms of 2nd , 1st and 0 degree, so we should set up the factors polynomials with the max degree of 1st in the form of $(ax+by+c)(dx+ey+f)$ , though you can also try to set up the factors polynomials in the form of $(ax+c)(by+d)$ , this would tell “no solution” instead, and it’s not because $x^2 - 3xy - 10y^2 + x - 19y - 6$ cannot be factorized over the integer numbers fields, it’s due to your wrong factors form setting at the beginning.</p>
+
+<p>Therefore, by processing the right factors form setting, we can get $x^2 - 3xy - 10y^2 + x - 19y - 6 = (x+2y+3)(x-5y-2)$ through testing the integers substitutions finitely.</p>
+
+<p><br /></p>
+
+<div style="overflow: auto;">
+$$x^2+x-6 \ \to\ x^2+x-6-1 = x^2+x-7 $$
+</div>
+
+<p><br /></p>
+
+<p><em>Problem</em>: Please factorize</p>
+
+<div style="overflow: auto;">
+$$x^2+x-7$$ 
+</div>
+
+<p>over the integer numbers field.</p>
+
+<p><br /></p>
+
+<p>Similarly, we have:</p>
+
+<div style="overflow: auto;">
+$$
+    \begin{cases}
+    &amp;ac &amp;= 1 \\
+    &amp;ad+bc&amp;=1 \\
+    &amp;bd&amp;=-7 \\
+    \end{cases}
+$$
+</div>
+
+<p>However, through setting up the right form of factors and testing the integers substitutions finitely, we discovered that the problem can only have the answer: $x^2+x-7=x^2+x-7$, because the equations system fails to satisfy all the integer substitution, in other words, this equations system has no integer solutions. However, it can be factorized over the real numbers field:</p>
+
+<div style="overflow: auto;">
+$$
+x^2+x-7=-\frac{1}{4}(-2 x+\sqrt{21}-1)(2 x+\sqrt{21}+1)
+$$
+</div>
+
+<p><br /></p>
+
+<h3 id="ms">MS</h3>
+
+<p><strong>Method of substitutions</strong></p>
+
+<p>MS is a powerful technique for factorizing polynomials with high degrees. By using MS, we can simplify the original polynomial by reducing its degree or creating the symmetric situation. This approach can greatly simplify the process of factoring complicated polynomials.</p>
+
+<p>Now, let me set up a problem first.</p>
+
+<p><br /></p>
+
+<div style="overflow: auto;">
+$$x^2+5x-6 \ \to\ (x^2)^2+5(x^2)-6 = x^4+5x^2-6$$
+</div>
+
+<p><br /></p>
+
+<p><em>Problem</em>: Please factorize</p>
+
+<div style="overflow: auto;">
+$$x^4+5x^2-6$$ 
+</div>
+
+<p>over the integer numbers field.</p>
+
+<p><br /></p>
+
+<p>Assume $y=x^2$, then</p>
+
+<div style="overflow: auto;">
+$$x^4+5x^2-6=y^2+5y-6=(y+6)(y-1)=(x^2+6)(x^2-1)=(x^2+6)(x+1)(x-1)$$
+</div>
+
+<p><br /></p>
+
+<p>Similarly…</p>
+
+<p><br /></p>
+
+<div style="overflow: auto;">
+$$x^2+5x-6 \ \to\ (x^2+5x-6)^2+5(x^2+5x-6)-6$$
+</div>
+
+<p><br /></p>
+
+<p><em>Problem</em>: Please factorize</p>
+
+<div style="overflow: auto;">
+$$(x^2+5x-6)^2+5(x^2+5x-6)-6$$ 
+</div>
+
+<p>over the integer numbers field.</p>
+
+<p><br /></p>
+
+<p>Assume $y=x^2+5x-6$, then</p>
+<div style="overflow: auto;">
+$$(x^2+5x-6)^2+5(x^2+5x-6)-6=y^2+5y-6=(y+6)(y-1)=(x^2+5x-6+6)(x^2+5x-6-1)=x(x+5)(x^2+5x-7)$$
+</div>
+
+<p>What if I expend the question:</p>
+<div style="overflow: auto;">
+$$(x^2+5x-6)^2+5(x^2+5x-6)-6 = x^4+10 x^3+18 x^2-35 x$$
+</div>
+
+<p>Since in this form, the problem won’t provide you any hint to set up the substitution $y=x^2+5x-6$ directly, you need to discover that hidden property yourself instead, but it is very hard to notice that \((x^2+5x-6)^2+5(x^2+5x-6)-6 = x^4+10 x^3+18 x^2-35 x\) reversely… So, is there a better method except MS to solve this problem? Luckily, yes, and we will discuss later.</p>
+
+<p><br /></p>
+
+<p>How about this…</p>
+
+<p><br /></p>
+
+<div style="overflow: auto;">
+$$x^2+5x-6 \ \to\ x^2+5x(x^2+5x-6)-6(x^2+5x-6)^2$$
+</div>
+
+<p><br /></p>
+
+<p><em>Problem</em>: Please factorize</p>
+
+<div style="overflow: auto;">
+$$x^2+5x(x^2+5x-6)-6(x^2+5x-6)^2$$ 
+</div>
+
+<p>over the integer numbers field.</p>
+
+<p><br /></p>
+
+<p>Assume $y=x^2+5x-6$, then</p>
+<div style="overflow: auto;">
+$$x^2+5x(x^2+5x-6)-6(x^2+5x-6)^2=x^2+5xy-6y^2=(x+6y)(x-y)$$
+</div>
+
+<p><br /></p>
+
+<p><em>Problem</em>: Please prove that the product of (any 4 consecutive positive integers) plus 1 can become a perfect square number.</p>
+
+<p><br /></p>
+
+<p>$\forall \  x \in \mathbb{Z^+}$, we have:</p>
+<div style="overflow: auto;">
+$$x(x+1)(x+2)(x+3)+1=\Big( x(x+3) \Big)\Big( (x+1)(x+2) \Big) +1 =(x^2+3x)(x^2+3x+2) +1 $$
+</div>
+
+<p>Assume $y=x^2+3x+1$, then we derive the answer</p>
+<div style="overflow: auto;">
+$$(x^2+3x)(x^2+3x+2)+1=(x^2+3x+1-1)(x^2+3x+1+1)+1=(y-1)(y+1)+1=y^2-1+1=y^2=(x^2+3x+1)^2$$
+</div>
+
+<p><br /></p>
+
+<p>It’s time to explain my motivation:</p>
+
+<p>Our primary goal is to factorize $x(x+1)(x+2)(x+3)+1$ and satisfy</p>
+
+<div style="overflow: auto;">
+$$x(x+1)(x+2)(x+3)+1=(?)^2$$
+</div>
+
+<p>And according to the 2 fundamental properties of factorizations:</p>
+
+<p><strong>1. $\forall \  P(x)$ can always be factorized to the product form of several $p(x)$ of 1st degree and with 2nd degree.</strong></p>
+
+<p><strong>2. The factorization of $\forall \  P(x)$ over the real numbers field is unique.</strong></p>
+
+<p>We know that the polynomial $x(x+1)(x+2)(x+3)+1$ must be factorable over the integer field since this problem is solvable, and also using different approaches won’t affect the result of the factorization over the integer field of this polynomial.</p>
+
+<p>However, expending the polynomial directly may be not a good approach, unless you’ve discovered that there is no other way. So then I have:</p>
+
+<div style="overflow: auto;">
+$$x(x+1)(x+2)(x+3)+1=\Big( x(x+3) \Big)\Big( (x+1)(x+2) \Big) +1 =(x^2+3x)(x^2+3x+2) +1$$
+</div>
+
+<p>But why didn’t I factorize $x(x+1)(x+2)(x+3)$ in this way:</p>
+
+<div style="overflow: auto;">
+$$x(x+1)(x+2)(x+3)+1=\Big( x(x+1) \Big)\Big( (x+2)(x+3) \Big) +1 =(x^2+x)(x^2+5x+6) +1$$
+</div>
+
+<p>Because $(x^2+3x)(x^2+3x+2)+1$ indicates the hidden identity of $x^2+3x$, and then I could apply the substitution easily to replace $x^2+3x$, but for $(x^2+x)(x^2+5x+6) +1$, you cannot do so.</p>
+
+<p>Then why did I set up $y=x^2+3x+1$ instead of $y=x^2+3x$, though both of them contain $x^2+3x$ ? It is because the former could reveal the hidden symmetry property of $(x^2+3x)(x^2+3x+2)+1$ and then I can naturally apply the formula $(y-1)(y+1)=y^2-1$ and derive the perfect square after adding 1, but the latter cannot.</p>
+
+<p><br /></p>
+
+<p><em>Problem</em>: Please factorize</p>
+
+<div style="overflow: auto;">
+$$x^4+(x-8)^4$$
+</div>
+
+<p>over the integer numbers field.</p>
+
+<p><br /></p>
+
+<p>If you know the binomial theorem, you can expand the polynomial $x^4+(x-8)^4=2 x^4-32 x^3+384 x^2-2048 x+4096$ and then do the factorization. However, it is not recommended, want to know why? Here is the answer:</p>
+
+<p><br /></p>
+
+<p>Assume $y=(x-4)^4$ and $z=y^2$, then we rewrite the express as</p>
+<div style="overflow: auto;">
+$$(y+4)^4+(y-4)^4=2y^4+192y^2+512=2(y^2)^2+192(y^2)+512=2z^2+192z+512$$
+</div>
+
+<p><br /></p>
+
+<p>When comparing $2z^2+192z+512$ and $2x^4-32x^3+384x^2-2048x+4096$, it is evident that factoring $2z^2+192z+512$ is a much simpler task than factoring the latter polynomial. The reason is because the substitution of $y=(x-4)^4$ what we were using could reveal the symmetry property of the polynomial and this property can provide a significant advantage in problem-solving, for this problem, it helped us eliminate the odd degree terms and accordingly decrease the complexity of the factorization.</p>
+
+<p>Now, how should we factorize $2z^2+192z+512$ ? Applying MUC? Yes, it is a valid approach, but not efficient enough for this case, we will discuss it later.</p>
+
+<p><br /></p>
+
+<h3 id="prt">PRT</h3>
+
+<p>Polynomial remainder theorem</p>
+
+<p>Assume $P(x)$ is a polynomial and $\exists \ P(x)=Q(x)D(x)+R(x)$, where $Q(x), D(x), R(x)$ are polynomials and $\deg(P(x))\ge \deg(D(x))&gt;\deg(R(x))$ <strong>or</strong> $\deg(D(x))=\deg(R(x))=0$ (This can be proved by induction). Then $\exists \ P(x)=Q(x)(x-r)+R(x)$, accordingly we have $P(r)=Q(r)\times 0+R(r)=R(r)$ . If $P(r)=R(r)=0$, then $P(x)=Q(x)(x-r)$ . In other words, if $P(r)=0$ , then $(x-r)$ must be one of its factors.</p>
+
+<p><br /></p>
+
+<p><em>Problem</em>: Please factorize</p>
+
+<div style="overflow: auto;">
+$$x^3-2x^2-5x+6$$
+</div>
+
+<p>over the integer numbers field.</p>
+
+<p><br /></p>
+
+<p>Through substituting some small integers, we found that $P(1)=0$ , therefore $(x-1)$ must be one of its factors. Then applying the polynomial division and MUC:</p>
+
+<div style="overflow: auto;">
+$$x^3-2x^2-5x+6=(x-1)(x^2-x-6)=(x-1)(x-3)(x+2)$$
+</div>
+
+<p><br /></p>
+
+<p><em>Problem</em>: Please factorize</p>
+
+<div style="overflow: auto;">
+$$2z^2+192z+512$$
+</div>
+
+<p>over the real numbers field.</p>
+
+<p><br /></p>
+
+<p>$2z^2+192z+512=2(z^2+96z+256)$, for this problem, applying the MUC is definitely not a good idea since the coefficients are too large. Besides, substituting random real numbers to test is also not an efficient approach… Therefore, we can try to solve the equation $P(z)=z^2+96z+256=0$ directly to find the $r$ that let $P(r)=0$ through applying the quadratic formula $z=\dfrac{-b\pm \sqrt{b^2-4ac}}{2a}=-48\pm 32\sqrt{2}$ , so the solution is:</p>
+
+<div style="overflow: auto;">
+$$2z^2+192z+512=2(x+48-32\sqrt{2})(x+48+32\sqrt{2})$$
+</div>
+
+<p><br /></p>
+
+<p>It’s time to introduce a corollary of PRT — RRT (Rational Roots Theorem) (it is not hard to prove):</p>
+
+<p>For a polynomial equation $P(x)=\displaystyle \sum_{i=0}^{i=n}\left ( a_{i}x^{i}\right )=0$ with $a_{i}\in \mathbb{Z}$ and $a_{n} \ne 0$ , then every rational solution $x=\dfrac{m}{n}$ which this equation has satisfies: $m$ is the factor of $a_{0}$ and $n$ is the factor of $a_{n}$ .</p>
+
+<p><br /></p>
+
+<h3 id="sys-polynomials">SYS Polynomials</h3>
+
+<p>Symmetric polynomials</p>
+
+<h3 id="mot">MOT</h3>
+
+<p>Method of observations and transformations</p>
+
+<p>It is generally recommended to avoid immediately applying formulaic solutions without even thinking when encountering a problem, as taking some time to conduct initial observations can often lead to more effective problem-solving outcomes.</p>
+
+<p>If I have a question like factorize $x^2+x-6$ over the integer numbers field, will you consider applying the quadric formula $x=\dfrac{-b \pm \sqrt{b^2-4 a c}}{2 a}$ first?</p>
+
+<p>No (I mean, you can, but, it’s strongly not recommended to do that). Instead, we can do some simple transformations to generate the result easily:</p>
+
+<div style="overflow: auto;">
+$$
+x^2+x-6=x^2+3x-2x-6=x(x+3)-2(x+3)=(x+3)(x-2)
+$$
+</div>
+
+<p>Or for this problem: Factorize $x^2-28x+195$ over the integer numbers field.</p>
+
+<p>Probably this one is not as simple as the previous one, because it contains larger numbers and is not obvious to observe anything… But, really?</p>
+
+<p>As long as you noticed $195=196-1$ and you are familiar with $196=14^2$, then you are able to solve this problem within 10 seconds, look:</p>
+
+<div style="overflow: auto;">
+$$
+x^2-28x+195=x^2-28x+196-1=(x^2-2\times 14x+14^2)-1^2=(x-14)^2-1^2=(x-14-1)(x-14+1)=(x-15)(x-13)
+$$
+</div>
+
+<p>Factorize $x^2-28x+195$ over the integer numbers field.</p>
+
+<p>We can also apply the similar method: $0=8\times2a^2-8\times2a^2$</p>
+
+<div style="overflow: auto;">
+$$
+64a^4+1 =(8^2a^4 + 8\times2a^2 +1) - 8\times2a^2 = (8a^2+1)^2 - (4a)^2=(8a^2-4a+1)(8a^2+4a+1)
+$$
+</div>
+
+<p>Upon reflection, you may be curious about how I was able to recognize the approach needed to solve these problems. The truth is, I wasn’t born with the knowledge. Rather, I have spent countless hours practicing and mastering various problem-solving techniques, which has allowed me to develop my mathematical intuition. What I want to emphasize is that humans have the ability to cultivate and refine their mathematical intuition (expanding your Maths database) through sufficient training and exposure, because this skill is about memorization and recognition (automatically retrieving or invoking a corresponding frame to solve the problem), etc… Just like developing a specific skill of a neural network through billions of training data… But for humans, the mechanized training process is a tedious and non-efficient process comparatively, since we are not as powerful as computers… However, we still need to practice as long as we aspire to participate in the Mathematical Olympiad or Putnam Maths Competition, these designed competitive mathematics for humans…</p>
+
+<p>So MOT is a purposeful approach that requires your powerful (trained) intuition for mathematics.</p>
+
+<h3 id="mte">MTE</h3>
+
+<p>Method of trials and errors</p>
+
+<p>Have you ever encountered a math problem that left you stumped, unable to even begin solving it? Chances are, you will at some point. But why does this happen?</p>
+
+<p>In competitive mathematics contests, problem setters strive to challenge well-prepared participants who have practiced typical problems extensively. To accomplish this, they must devise “good problems” that are difficult enough to separate the exceptional from the merely competent. These problems often require discovering a clever trick that is not immediately apparent.</p>
+
+<p>For instance, a problem like $64a^4+1=(64a^4 + 16a^2 +1) - 16a^2$ may have been considered challenging in the past, but it has become too familiar to many participants. Therefore, problem setters must continue to raise the bar by increasing the difficulty of their problems.</p>
+
+<p>However, it’s important to remember that even the most challenging problems in a Mathematics contest are designed to be solved by humans within a limited time frame, so there’s no need to panic. Rest assured, you won’t encounter a problem as difficult as Goldbach’s conjecture, which is a extremely hard question that is yet to be proven, during the contest.</p>
+
+<p>Now, let’s delve into the Method of Trials and Errors (MTE):</p>
+
+<p>This approach is useful when your maths knowledge database is not sufficient to cover the problem directly, and you cannot call any existing methods from your database to solve the problem effectively. In such cases, try MTE. As we’ve mentioned earlier, even the most challenging problems in a Mathematics contest are designed to be solved by humans within a limited time frame. The difficulty of a problem may stem from the fact that you haven’t discovered the clever trick or technique that could solve it easily. It’s possible that a simple transformation to your approach could lead to a sudden insight or revelation from your observations that makes the solution obvious.</p>
+
+<h3 id="practice">Practice</h3>
+
+<h3 id="answers-hover-to-display">Answers (hover to display)</h3>
+<div class="hide-and-display-trigger">
+<div class="hide-and-display" style="overflow: auto;">
+$$
+64a^4+1 =(8^2a^4 + 8\times2a^2 +1) - 8\times2a^2 = (8a^2+1)^2 - (4a)^2=(8a^2-4a+1)(8a^2+4a+1)
+$$
+</div>
+</div>
+
+
+  </div><a class="u-url" href="/2023/02/27/Competitive-Mathematics-Factorization.html" hidden></a>
+
+</article>
+
+<hr>
+
+<script src="https://giscus.app/client.js"
+        data-repo="Deep0Thinking/Deep0thinking.github.io"
+        data-repo-id="R_kgDOHLLlWQ"
+        data-category="General"
+        data-category-id="DIC_kwDOHLLlWc4CShS4"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+      </div>
+    </main>
+
+  </body>
+
+</html>

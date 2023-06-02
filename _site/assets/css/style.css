@@ -362,13 +362,13 @@ pre > code {
  * Wrapper
  */
 .wrapper {
-  max-width: calc(900px - (20px));
+  max-width: calc(900px - 150px - (20px));
   margin-right: auto;
   margin-left: auto;
   padding-right: 10px;
   padding-left: 10px;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1366px) {
   .wrapper {
     max-width: calc(900px - (20px * 2));
     padding-right: 20px;
@@ -428,7 +428,7 @@ table th {
 table td {
   border: 1px solid #e8e8e8;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1366px) {
   table {
     display: block;
     overflow-x: auto;
@@ -455,7 +455,7 @@ table td {
   margin-bottom: 0;
   float: left;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1240px) {
   .site-title {
     padding-right: 45px;
   }
@@ -513,7 +513,7 @@ table td {
 .site-nav .page-link:not(:last-child) {
   margin-right: 0;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1240px) {
   .site-nav {
     position: static;
     float: right;
@@ -582,7 +582,7 @@ table td {
   width: calc(100% - (20px / 2));
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1366px) {
   .footer-col-1 {
     width: calc(35% - (20px / 2));
   }
@@ -593,7 +593,7 @@ table td {
     width: calc(45% - (20px / 2));
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1240px) {
   .footer-col-wrapper {
     display: flex;
   }
@@ -657,7 +657,7 @@ table td {
   letter-spacing: -1px;
   line-height: 1.15;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1366px) {
   .post-title,
   .post-content h1 {
     font-size: 2.625rem;
@@ -673,7 +673,7 @@ table td {
 .post-content h2 {
   font-size: 1.75rem;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1366px) {
   .post-content h2 {
     font-size: 2rem;
   }
@@ -681,7 +681,7 @@ table td {
 .post-content h3 {
   font-size: 1.375rem;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1366px) {
   .post-content h3 {
     font-size: 1.625rem;
   }
@@ -740,7 +740,7 @@ table td {
 /**
  * Grid helpers
  */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1366px) {
   .one-half {
     width: calc(50% - (20px / 2));
   }
@@ -923,21 +923,55 @@ table td {
   color: black;
 }
 
+/**
+ * default.html
+ */
 .section-nav {
   display: none;
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1240px) {
   .section-nav {
     display: block;
+    text-align: left;
     background-color: #fff;
     margin: 5px 0;
     padding: 10px 30px;
+    width: 145px;
+    max-height: calc(100vh - 180px);
+    overflow: auto;
+    white-space: nowrap;
     border: 1px solid #e8e8e8;
     border-radius: 3px;
     position: fixed;
-    left: calc((100vw - 1325px) / 2);
-    top: 10%;
+    left: 25px;
+    top: 90px;
   }
+}
+@media screen and (min-width: 1456px) {
+  .section-nav {
+    display: block;
+    text-align: left;
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 10px 30px;
+    width: 205px;
+    max-height: calc(100vh - 180px);
+    overflow: auto;
+    white-space: nowrap;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    position: fixed;
+    left: calc((100vw - 1455px) / 2);
+    top: 90px;
+  }
+}
+
+.hide-and-display {
+  visibility: hidden;
+}
+
+.hide-and-display-trigger:hover .hide-and-display {
+  visibility: visible;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -36,7 +36,7 @@ And after you finish reading the *数学奥林匹克小丛书*, here is a harder
 
 In addition to the above, I would also suggest that you could search on the Internet to check out others' comments on these textbooks before reading, because that may help you to avoid some bad contents or chapters and could save you a lot of times and energy in reading. Besides that, you should also try to check out the Maths Competitions textbooks with others suggested, because mine recommendation may not the most suitable choice for you, it is all possible...
 
-In short, please try to make the best textbooks choice as possible as you can before you start slogging away, because that could help you to approach an efficient study pace and accelerate your progress indeed.
+In short, please try to make the best textbooks choice as possibly as you can before you start slogging away, because that could help you to approach an efficient study pace and accelerate your progress indeed.
 
 - ### The exercise books for preparing the **Putnam Maths Competition**:
 
