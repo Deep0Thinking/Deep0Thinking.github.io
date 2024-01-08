@@ -82,6 +82,7 @@
 .Option-width
 {
   width: 100%;
+  text-decoration: none;
 }
 
 .Group-Container-Full-Display
@@ -135,6 +136,7 @@
   opacity: 1;
   width: 100%;
   transition: 0.3s;
+  vertical-align: top;
 }
 
 .Single-Container:hover .ImgOpacity
@@ -213,6 +215,7 @@
   border-color: DodgerBlue;
   transform: scale(1.1);
   transition: 0.3s;
+  text-decoration: underline;
   color: black;
 }
 
@@ -268,4 +271,23 @@
 
 .hide-and-display-trigger:hover .hide-and-display {
   visibility: visible;
+}
+
+/**
+ * home.html
+ */
+
+.post-info::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.post-thumbnail img{
+  margin-left: 5px;
+  margin-right: 15px;
+  float: left;
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
 }
