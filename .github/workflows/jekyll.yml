@@ -11,6 +11,12 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+    paths:
+      - "_site/**" # Runs only when there are changes in the 'site' directory
+  pull_request:
+    branches: ["main"]
+    paths:
+      - "_site/**"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
